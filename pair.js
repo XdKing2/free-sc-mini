@@ -35,9 +35,9 @@ const config = {
   AUTO_LIKE_EMOJI: ['🎈','👀','❤️‍🔥','💗','😩','☘️','🗣️','🌸'],
   PREFIX: '.',
   MAX_RETRIES: 3,
-  GROUP_INVITE_LINK: 'https://chat.whatsapp.com/Dh7gxX9AoVD8gsgWUkhB9r',
-  FREE_IMAGE: 'https://files.catbox.moe/f9gwsx.jpg',
-  NEWSLETTER_JID: '120363402507750390@newsletter', // replace with your own newsletter its the main newsletter
+  GROUP_INVITE_LINK: '',
+  FREE_IMAGE: '',
+  NEWSLETTER_JID: '', // replace with your own newsletter its the main newsletter
   
   // ✅ SUPPORT/VALIDATION NEWSLETTER ( recommended) 
   // this will not affect anything..its just for supporting the dev channel
@@ -70,8 +70,8 @@ const config = {
   
   OTP_EXPIRY: 300000,
   OWNER_NUMBER: process.env.OWNER_NUMBER || '263714757857',
-  CHANNEL_LINK: 'https://whatsapp.com/channel/0029VbB3YxTDJ6H15SKoBv3S',
-  BOT_NAME: 'ғʀᴇᴇ-ᴍɪɴɪ',
+  CHANNEL_LINK: '',
+  BOT_NAME: 'ᴀᴋɪɴᴅᴜ-ᴍᴅ',
   BOT_VERSION: '1.0.2',
   OWNER_NAME: 'ᴍʀ xᴅᴋɪɴɢ',
   IMAGE_PATH: 'https://files.catbox.moe/f9gwsx.jpg',
@@ -2181,5 +2181,6 @@ initMongo().catch(err => console.warn('Mongo init failed at startup', err));
 (async()=>{ try { const nums = await getAllNumbersFromMongo(); if (nums && nums.length) { for (const n of nums) { if (!activeSockets.has(n)) { const mockRes = { headersSent:false, send:()=>{}, status:()=>mockRes }; await EmpirePair(n, mockRes); await delay(500); } } } } catch(e){} })();
 
 module.exports = router;
+
 
 
